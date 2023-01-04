@@ -1,0 +1,25 @@
+@import 'abstracts/variables';
+@import 'abstracts/mixins';
+
+@import 'base/typography';
+@import 'base/reset';
+
+@import "layout/hero";
+@import "layout/header";
+@import "layout/latestNews";
+@import "layout/main-style";
+@import "layout/society";
+@import "layout/advertising";
+@import "layout/special";
+@import "layout/interview";
+@import "layout/category";
+@import "layout/info";
+@import "layout/about";
+@import "layout/contact";
+@import "layout/ad";
+@import "layout/tag";
+@import "layout/footer";
+
+@import 'components/buttons';
+
+@import 'pages/home';

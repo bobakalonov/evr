@@ -1,0 +1,178 @@
+.interview {
+    padding-bottom: 5rem;
+    .container {
+        @include container;
+        max-width: 1320px;
+        padding: 5rem 3rem 3rem;
+        border-radius: 12px;
+        background: $white-color;
+        @include media(650px) {
+            padding: 2rem !important;
+            max-width: 1360px !important;
+        }
+    }
+    &__header {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        margin-bottom: 4rem;
+    }
+    &__title {
+        @include title;
+    }
+    &__main {
+        display: flex;
+        position: relative;
+        width: 100%;
+        margin-bottom: 3rem;
+    }
+    &__img {
+        width: 100%;
+        max-width: 1259px;
+        height: 100%;  
+        max-height: 713px; 
+        object-fit: fill;
+        @include media(600px) {
+            max-width: 550px;
+            height: 313px;
+        }
+        @include media(550px) {
+            height: 280px;
+            object-fit: cover;
+        }
+        @include media(450px) {
+            height: 222px;
+            object-fit: cover;
+        }
+    }
+    &__text-wrapper {
+        width: 100%;
+        max-width: 1007px;
+        position: absolute;
+        bottom: 3rem;
+        left: 3rem;
+        margin-top: auto;
+        color: $white-color;
+        @include media(1110px) {
+            max-width: 900px;
+        }
+        @include media(910px) {
+            max-width: 760px;
+        }
+        @include media(810px) {
+            max-width: 660px;
+        }
+        @include media(700px) {
+            max-width: 400px;
+        }
+        @include media(535px) {
+            max-width: 320px;
+            left: 1rem;
+            bottom: 1rem;
+        }
+        @include media(450px) {
+            max-width: 240px;
+            left: 1rem;
+            bottom: 1rem;
+        }
+        &__subtitle {
+            font-weight: 400;
+            font-size: 1.8rem;
+            line-height: 2.4rem;
+            margin-bottom: 0.9rem;
+            text-transform: uppercase;
+            @include media(810px) {
+                font-size: 1.4rem;
+                line-height: 1.8rem;
+            }
+        }
+        &__title {
+            font-weight: 600;
+            font-size: 3.7rem;
+            line-height: 5rem;
+            @include media(1110px) {
+                font-size: 3rem;
+                line-height: 4.6rem;
+            }
+            @include media(910px) {
+                font-size: 2.7rem;
+                line-height: 4.3rem;
+            }
+            @include media(810px) {
+                font-size: 2.2rem;
+                line-height: 4rem;
+            }
+            @include media(535px) {
+                font-size: 2rem;
+                line-height: 3.8rem;
+            }
+            @include media(535px) {
+                font-size: 2rem;
+                line-height: 3.8rem;
+                overflow: hidden !important;
+                display: -webkit-box;
+                text-overflow: ellipsis;
+                -webkit-line-clamp: 2;
+                -webkit-box-orient: vertical;
+            }
+            @include media(535px) {
+                font-size: 1.8rem;
+                line-height: 2.8rem;
+            }
+        }
+    }
+    &__player {
+        user-select: none;
+        z-index: 1;
+        width: 100%;
+        max-width: 122px;
+        height: 100%;
+        max-height: 122px;
+        cursor: pointer;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%,-50%);
+        background: rgba(251, 210, 48, 0.5);
+        display: grid;
+        place-items: center;
+        border-radius: 50%;
+        transition: all 0.2s;
+        img {
+            margin-left: 10px;
+        }
+        &:hover {
+            background: $primary-color;
+        }
+        @include media(1020px) {
+            max-width: 90px;
+            max-height: 90px;
+            img {
+                width: 28px;
+                height: 40px;
+            }
+        }
+        @include media(700px) {
+            max-width: 70px;
+            max-height: 70px;
+            img {
+                margin-left: 5px;
+                width: 19px;
+                height: 29px;
+            }
+        }
+    }
+
+    // list
+    &__list {
+        display: grid;
+        gap: 2rem;
+        grid-template-columns: 1fr 1fr 1fr;
+        @include media(1010px) {
+            grid-template-columns: 1fr 1fr;
+        }
+        @include media(800px) {
+            grid-template-columns: 1fr;
+        }
+    }
+}

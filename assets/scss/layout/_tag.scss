@@ -1,0 +1,17 @@
+.tag {
+    padding: 5rem 0;
+    .container {
+        @include container;
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr;
+        gap: 2rem;
+
+        @include responsive(big-tables) {
+            grid-template-columns: 1fr 1fr;
+        }
+
+        @include responsive(phone) {
+            grid-template-columns: 1fr;
+        }
+    }
+}

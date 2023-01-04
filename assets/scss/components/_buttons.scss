@@ -1,0 +1,190 @@
+.header-top__weather-btn {
+    position: relative;
+    user-select: none;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 1.2rem 2rem;
+    background-color: $blue;
+    border-radius: 8px;
+    color: $white-color;
+    cursor: pointer;
+    column-gap: 11px;
+    margin-right: 2.5rem;
+    transition: all 0.3s;
+    z-index: 5;
+    img {
+        z-index: 2;
+    }
+    .cloude-img {
+        z-index: 0 !important;
+    }
+    p {
+        text-transform: capitalize;
+        width: 130px;
+        font-weight: 600;
+        font-size: 1.6rem;
+        line-height: 2.1rem;
+    }
+    @include media(884px) {
+        width: 100%;
+        justify-content: start;
+        margin: 0;
+        p {
+            margin-right: auto;
+        }
+    }
+    &:hover {
+        background-color: $btn-dark-blue;
+    }
+    ul {
+        z-index: 1;
+        display: grid;
+        width: 100%;
+        position: absolute;
+        top: 0;
+        left: 0;
+        background-color: $blue;
+        border-radius: 8px;
+        color: $white-color;
+        list-style: none;
+        cursor: default;
+        li {
+            text-transform: capitalize;
+            padding: 1rem 2rem;
+            font-weight: 600;
+            font-size: 1.6rem;
+            line-height: 2rem;
+            display: flex;
+            align-items: center;
+            gap: 1.1rem;
+            width: 100%;
+            &:hover {
+                background-color: $btn-dark-blue;
+            }
+            &:first-child {
+                border-radius: 8px 8px 0 0;
+            }
+            &:last-child {
+                border-radius: 0 0 8px 8px;
+            }
+        }
+    }
+}
+.header-top__lang-btn {
+    position: relative;
+    display: flex;
+    align-items: center;
+    padding: 12px 20px;
+    border-radius: 8px;
+    border: none;
+    background: $site-balck-color;
+    color: $white-color;
+    .globus {
+        margin-right: 12px;
+    }
+    .arr {
+        margin-left: 2px;
+    }
+    cursor: pointer;
+    @include media(884px) {
+        display: none;
+    }
+    .lang-wrapper {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        padding: 12px 20px;
+        border-radius: 8px;
+        background: $site-balck-color;
+        color: $white-color;
+        display: grid;
+        place-items: center;
+        gap: 1rem;
+    }
+}  
+.society__all-view-btn {
+    display: flex;
+    align-items: center;
+    text-decoration: none;
+    color: $dark-blue;
+    font-weight: 600;
+    font-size: 1.6rem;
+    line-height: 2.1rem;
+    background: $site-bg-color;
+    padding: 1.2rem 2rem;
+    border-radius: 8px;
+    gap: 5px;
+    @include media(840px) {
+        font-weight: 500;
+        font-size: 1.6rem;
+        line-height: 1.8rem;
+        img {
+            width: 16px;
+            height: 16px;
+        }
+    }
+    @include media(600px) {
+        font-weight: 500;
+        font-size: 1.4rem;
+        line-height: 1.6rem;
+        padding: 1rem;
+        border-radius: 10px;
+        img {
+            width: 13px;
+            height: 13px;
+        }
+    }
+    p {
+        @include media(389px) {
+            overflow: hidden !important;
+            display: -webkit-box;
+            text-overflow: ellipsis;
+            -webkit-line-clamp: 1;
+            -webkit-box-orient: vertical;
+        }
+    }
+} 
+.interview__all-view-btn {
+    display: flex;
+    align-items: center;
+    text-decoration: none;
+    color: $dark-blue;
+    font-weight: 600;
+    font-size: 1.6rem;
+    line-height: 2.1rem;
+    background: $site-bg-color;
+    padding: 1.2rem 2rem;
+    border-radius: 8px;
+    gap: 5px;
+    @include media(840px) {
+        font-weight: 500;
+        font-size: 1.6rem;
+        line-height: 1.8rem;
+        img {
+            width: 16px;
+            height: 16px;
+        }
+    }
+    @include media(600px) {
+        font-weight: 500;
+        font-size: 1.4rem;
+        line-height: 1.6rem;
+        padding: 1rem;
+        border-radius: 10px;
+        img {
+            width: 13px;
+            height: 13px;
+        }
+    }
+    p {
+        @include media(389px) {
+            overflow: hidden !important;
+            display: -webkit-box;
+            text-overflow: ellipsis;
+            -webkit-line-clamp: 1;
+            -webkit-box-orient: vertical;
+        }
+    }
+} 

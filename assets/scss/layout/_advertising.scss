@@ -1,0 +1,91 @@
+.advertising {
+    .container {
+        @include container;
+        position: relative;
+    }
+    &__swiper {
+        user-select: none;
+        position: initial !important;
+        &-slide {
+            img {
+                width: 100%;
+                height: 100%;
+                @include media(750px) {
+                    height: 217px;
+                }
+                @include media(620px) {
+                    height: 190px;
+                }
+                @include media(520px) {
+                    height: 170px;
+                }
+                @include media(490px) {
+                    height: 150px;
+                }
+                @include media(450px) {
+                    height: 130px;
+                }
+                @include media(380px) {
+                    height: 110px;
+                }
+            }
+        }
+        .swiper-button-next,.swiper-button-prev {
+            display: grid;
+            place-items: center;
+            width: 45px !important;
+            height: 45px !important;
+            border-radius: 50%;
+            z-index: 1;
+            color: $primary-color;
+            background: $black-color !important;
+            @include media(950px) {
+                width: 40px !important;
+                height: 40px !important;
+            }
+            @include media(750px) {
+                width: 37px !important;
+                height: 37px !important;
+            }
+            @include media(620px) {
+                width: 34px !important;
+                height: 34px !important;
+            }
+            @include media(480px) {
+                width: 31px !important;
+                height: 31px !important;
+            }
+            &:hover {
+                color: $black-color ;
+                background: $primary-color!important;
+            }
+            &::after  {
+                font-weight: 700;
+                font-size: 16px;
+                line-height: 17px;
+                @include media(950px) {
+                    font-weight: 700;
+                    font-size: 14px;
+                    line-height: 15px;
+                }
+                @include media(620px) {
+                    font-weight: 700;
+                    font-size: 12px;
+                    line-height: 13px;
+                }
+                @include media(480px) {
+                    font-weight: 700;
+                    font-size: 11px;
+                    line-height: 12px;
+                }
+                
+            }
+        }
+        .swiper-button-next {
+            right: 5px;
+        }
+        .swiper-button-prev {
+            left: 0px;
+        }
+    }
+}

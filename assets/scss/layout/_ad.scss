@@ -1,0 +1,111 @@
+.ad {
+    padding: 5rem 0;
+    .container {
+        @include container;
+        display: flex;
+        gap: 3rem;
+        @include media(1240px) {
+            flex-direction: column;
+        }
+    }
+    &__selcts {
+        background: #fff;
+        border-radius: 12px;
+        padding: 3rem;
+        display: grid;
+        gap: 2rem;
+        &-title {
+            font-weight: 600;
+            font-size: 2.7rem;
+            line-height: 3.6rem;
+            margin-bottom: 1rem;
+        }
+        &-select {  
+            position: relative;
+            padding: 1.5rem 2rem 1.5rem 5.4rem;
+            border-radius: 12px;
+            background: #F3F5F6;
+            color: #000;
+            width: 100%;
+            max-width: 789px;
+            font-weight: 500;
+            font-size: 2rem;
+            line-height: 2.8rem;
+            svg {
+                position: absolute;
+                top: 1.5rem;
+                left: 2rem;
+            }
+            p {
+                font-weight: 400;
+                font-size: 1.6rem;
+                line-height: 2.4rem;
+                color: #252626;
+            }
+            cursor: pointer;
+            @include media(1240px) {
+                max-width: 100%;
+            }
+        }
+        &-tel-number {
+            border: 2px solid $primary-color;
+            border-radius: 12px;
+            width: 100%;
+            padding: 2.5rem;
+            position: relative;
+            &__img {
+                position: absolute;
+                top: 0;
+                right: 77.91px;
+            }
+            &__subtitle {
+                font-weight:500;
+                font-size: 2rem;
+                line-height: 2.8rem;
+                color: #3D3D3D;
+                margin-bottom: 1.2rem;
+            }
+            &__number {
+                display: flex;
+                align-items: center;
+                gap: 1.4rem;
+                font-weight: 600;
+                font-size: 2.7rem;
+                line-height: 3.7rem;
+                margin-bottom: 1.2rem;
+            }
+            &__description {
+                font-weight: 500;
+                font-size: 1.6rem;
+                line-height: 2.2rem;
+                color: #C4C4C4;
+            }
+        }
+    }
+
+    &__right {
+        padding: 3rem 2rem;
+        background: $white-color;
+        border-radius: 12px;
+        &-latest-news__list {
+            display: grid;
+            gap: 2rem;
+            grid-template-columns: 1fr;
+            margin-bottom: 5rem;
+            @include media(1240px) {
+                grid-template-columns: 1fr 1fr;
+                margin-bottom: 0;
+            }
+            @include media(900px) {
+                grid-template-columns: 1fr;
+            }
+            &__title {
+                font-weight: 600;
+                font-size: 2.7rem;
+                line-height: 3.6rem;
+                margin-bottom: 3rem;
+                
+            }
+        }
+    }
+}

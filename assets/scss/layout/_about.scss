@@ -1,0 +1,87 @@
+.about {
+    padding: 5rem 0;
+    .container {
+        @include container;
+    }
+    &__hero {
+        background: #fff;
+        border-radius: 12px;
+        padding: 3rem;
+        margin-bottom: 5rem;
+        &-img {
+            margin-bottom: 3rem;
+            img {
+                width: 100%;
+            }
+        }
+        &-title {
+            font-weight: 600;
+            font-size: 2.7rem;
+            line-height: 3.6rem;
+            margin-bottom: 2.3rem;
+        }
+        &-text {
+            font-weight: 400;
+            font-size: 2rem;
+            line-height: 3rem;
+            margin-bottom: 3rem;
+        }
+        &-btns {
+            display: flex;
+            align-items: center;
+            gap: 2rem;
+            a {
+                text-decoration: none;
+                padding: 1.2rem 4rem;
+                border-radius: 12px;
+                color: $black-color;
+                font-weight: 500;
+                font-size: 1.6rem;
+                line-height: 2.2rem;
+            }
+        }
+        &-contact-btn {
+            background: $primary-color;
+        }
+        &-advertising-btn {
+            background: #EFEFEF;
+        }
+    }
+    &__selcts {
+        background: #fff;
+        border-radius: 12px;
+        padding: 3rem;
+        display: grid;
+        gap: 2rem;
+        &-title {
+            font-weight: 600;
+            font-size: 2.7rem;
+            line-height: 3.6rem;
+            margin-bottom: 1rem;
+        }
+        &-select {
+            position: relative;
+            padding: 1.5rem 2rem 1.5rem 5.4rem;
+            border-radius: 12px;
+            background: #F3F5F6;
+            color: #000;
+            width: 100%;
+            max-width: 789px;
+            font-weight: 500;
+            font-size: 2rem;
+            line-height: 2.8rem;
+            svg {
+                position: absolute;
+                top: 1.5rem;
+                left: 2rem;
+            }
+            p {
+                font-weight: 400;
+                font-size: 1.6rem;
+                line-height: 2.4rem;
+                color: #252626;
+            }
+            cursor: pointer;
+        }
+    }
+}

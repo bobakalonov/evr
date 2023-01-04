@@ -1,0 +1,106 @@
+@mixin container {
+    width: 100%;
+    max-width: 1360px;
+    padding-left: 20px;
+    padding-right: 20px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+@mixin title {
+    font-weight: 600;
+    font-size: 3.7rem;
+    line-height: 5rem;
+    @include media(650px) {
+        font-size: 3rem;
+        line-height: 4.5rem;
+    }
+    @include media(450px) {
+        font-size: 2.5rem;
+        line-height: 2.7rem;
+    }
+}
+
+@mixin item-subtitle {
+    font-weight: 400;
+    font-size: 1.2rem;
+    line-height: 1.6rem;
+}
+
+@mixin item {
+    border-radius: 12px;
+    border: 1px solid #E7E7E7;
+    display: flex;
+    flex-direction: column;
+    transition: all 0.3s;
+
+    &:hover {
+        border-color: transparent;
+        box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.1);
+    }
+}
+
+@mixin responsive($breakpoint) {
+    @if($breakpoint ==m-phone) {
+        @media only screen and (max-width: 440px) {
+            @content
+        }
+    }
+
+    ;
+
+    @if($breakpoint ==phone) {
+        @media only screen and (max-width: 696px) {
+            @content
+        }
+    }
+
+    ;
+
+    @if($breakpoint ==tables) {
+        @media only screen and (max-width: 768px) {
+            @content
+        }
+    }
+
+    ;
+
+    @if($breakpoint ==middle-table) {
+        @media only screen and (max-width: 885px) {
+            @content
+        }
+    }
+
+    ;
+
+    @if($breakpoint ==big-tables) {
+        @media only screen and (max-width: 993px) {
+            @content
+        }
+    }
+
+    ;
+
+    @if($breakpoint ==desktop) {
+        @media only screen and (max-width: 1110px) {
+            @content
+        }
+    }
+
+    ;
+
+    @if($breakpoint ==big-desktop) {
+        @media only screen and (max-width: 1440px) {
+            @content
+        }
+    }
+
+    ;
+}
+
+
+@mixin media($wh) {
+    @media (max-width: $wh) {
+        @content
+    }
+}

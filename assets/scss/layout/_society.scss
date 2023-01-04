@@ -1,0 +1,41 @@
+.society {
+    padding: 5rem 0;
+
+    .container {
+        @include container;
+        max-width: 1320px;
+        padding: 3rem;
+        border-radius: 12px;
+        background: $white-color;
+        @include media(650px) {
+            padding: 2rem !important;
+            max-width: 1360px !important;
+        }
+    }
+
+    &-header {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        margin-bottom: 3.5rem;
+        gap: 1rem;
+    }
+
+    &__title {
+        @include title;
+    }
+
+    &-list {
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr;
+        gap: 2rem;
+
+        @include responsive(big-tables) {
+            grid-template-columns: 1fr 1fr;
+        }
+
+        @include responsive(phone) {
+            grid-template-columns: 1fr;
+        }
+    }
+}
